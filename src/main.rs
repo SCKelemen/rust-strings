@@ -27,6 +27,19 @@ fn main() {
 
     tests.into_iter().for_each(|test| println!("\t{}",test));
     println!("end");
+    compare("hello".to_string(), "hell".to_string());
 }
 
 
+fn compare(large: String, small: String) -> bool {
+    let large_chars = large.chars(); 
+    let small_chars = &mut small.chars(); 
+    println!("{}", small_chars.as_str());
+    for n in (0..small.len()) {
+        match small_chars.nth(n) {
+            Some(c) => println!("{}:{}", n, c),
+            None => println!("{}:{}", n, "None")
+	}
+    } 
+    true
+}
