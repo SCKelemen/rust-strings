@@ -36,7 +36,7 @@ fn compare(large: String, small: String) -> bool {
     let small_chars = &mut small.chars(); 
     println!("{}", small_chars.as_str());
     for n in (0..small.len()) {
-        match small_chars.nth(1) {
+        match small_chars.nth(0) {
             Some(c) => println!("{}:{}", n, c),
             None => println!("{}:{}", n, "None")
 	}
